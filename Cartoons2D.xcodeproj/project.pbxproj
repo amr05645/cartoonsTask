@@ -16,6 +16,10 @@
 		EB1178C92934D90400C0EA16 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1178C82934D90400C0EA16 /* ReusableView.swift */; };
 		EB1AE1F42934DA660057B40A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1F22934DA660057B40A /* HomeTableViewCell.swift */; };
 		EB1AE1F52934DA660057B40A /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1AE1F32934DA660057B40A /* HomeTableViewCell.xib */; };
+		EB1AE1F82934E03F0057B40A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1F72934E03F0057B40A /* NetworkManager.swift */; };
+		EB1AE1FB2934E16F0057B40A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE1FA2934E16F0057B40A /* HomeModel.swift */; };
+		EB1AE1FE2934E50E0057B40A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EB1AE1FD2934E50E0057B40A /* Kingfisher */; };
+		EB1AE2012934E53A0057B40A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AE2002934E53A0057B40A /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,9 @@
 		EB1178C82934D90400C0EA16 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		EB1AE1F22934DA660057B40A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		EB1AE1F32934DA660057B40A /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		EB1AE1F72934E03F0057B40A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EB1AE1FA2934E16F0057B40A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		EB1AE2002934E53A0057B40A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1AE1FE2934E50E0057B40A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +92,7 @@
 		EB1178C22934D85700C0EA16 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB1AE1F92934E15F0057B40A /* Model */,
 				EB1178CD2934D9C200C0EA16 /* View */,
 			);
 			path = Home;
@@ -92,6 +101,8 @@
 		EB1178C72934D8C600C0EA16 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EB1AE1FF2934E5280057B40A /* Extensions */,
+				EB1AE1F62934E02B0057B40A /* NetworkManager */,
 				EB1178CA2934D93000C0EA16 /* Protocol */,
 			);
 			path = Helpers;
@@ -124,6 +135,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EB1AE1F62934E02B0057B40A /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				EB1AE1F72934E03F0057B40A /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		EB1AE1F92934E15F0057B40A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB1AE1FA2934E16F0057B40A /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB1AE1FF2934E5280057B40A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB1AE2002934E53A0057B40A /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +175,9 @@
 			dependencies = (
 			);
 			name = Cartoons2D;
+			packageProductDependencies = (
+				EB1AE1FD2934E50E0057B40A /* Kingfisher */,
+			);
 			productName = Cartoons2D;
 			productReference = EB1178AA2934D72900C0EA16 /* Cartoons2D.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +206,9 @@
 				Base,
 			);
 			mainGroup = EB1178A12934D72900C0EA16;
+			packageReferences = (
+				EB1AE1FC2934E50E0057B40A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EB1178AB2934D72900C0EA16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -196,8 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1AE1F82934E03F0057B40A /* NetworkManager.swift in Sources */,
 				EB1178AE2934D72900C0EA16 /* AppDelegate.swift in Sources */,
+				EB1AE2012934E53A0057B40A /* UIImageView+Extension.swift in Sources */,
 				EB1AE1F42934DA660057B40A /* HomeTableViewCell.swift in Sources */,
+				EB1AE1FB2934E16F0057B40A /* HomeModel.swift in Sources */,
 				EB1178B02934D72900C0EA16 /* SceneDelegate.swift in Sources */,
 				EB1178C52934D87500C0EA16 /* HomeViewController.swift in Sources */,
 				EB1178C92934D90400C0EA16 /* ReusableView.swift in Sources */,
@@ -344,8 +388,9 @@
 				INFOPLIST_FILE = Cartoons2D/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,8 +416,9 @@
 				INFOPLIST_FILE = Cartoons2D/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB1AE1FC2934E50E0057B40A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB1AE1FD2934E50E0057B40A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1AE1FC2934E50E0057B40A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EB1178A22934D72900C0EA16 /* Project object */;
 }
